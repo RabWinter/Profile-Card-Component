@@ -1,0 +1,125 @@
+.container {
+ min-height: 100vh;
+ width: 100vw;
+ max-width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+ overflow: hidden;
+}
+
+.circles {
+ position: absolute;
+ overflow: hidden;
+
+ &__top {
+  transform: translate(-48%, 12%);
+
+  @include breakpoint-up(large) {
+   transform: translate(-25%, 4%);
+  }
+
+  @include breakpoint-up(xlarge) {
+   transform: translate(-25%, 4%);
+  }
+ }
+
+ &__bottom {
+  transform: translate(48%, -10%);
+
+  @include breakpoint-up(large) {
+   transform: translate(65%, -2%);
+  }
+
+  @include breakpoint-up(xlarge) {
+   transform: translate(96%, 6%);
+  }
+ }
+}
+
+.card {
+ min-height: 23.375rem;
+ width: 20.375rem;
+ margin: 2rem;
+ background-color: azure;
+ border-radius: 15px;
+ z-index: 1;
+
+ &__header {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+ }
+
+ &__user {
+  height: 3rem;
+  width: 100%;
+  text-align: center;
+ }
+
+ &__user--img {
+  position: relative;
+  bottom: 7px;
+  transform: translateY(-50%);
+  border-radius: 50rem;
+  border: 5px solid #ffffff;
+ }
+
+ &__text--container {
+  text-align: center;
+  border-bottom: 1px solid $lightGray;
+  margin-top: 1.1875rem;
+  margin-bottom: 1.875rem;
+
+  h1 {
+   font-size: 1.1rem;
+   margin: 0;
+   padding: 0;
+  }
+
+  span {
+   color: $darkGrayishBlue;
+   font-weight: 300;
+  }
+
+  p {
+   font-size: 0.9rem;
+   margin-bottom: 1.75rem;
+   color: $darkGrayishBlue;
+  }
+ }
+
+ &__stats--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1.855rem;
+  margin-right: 2.625rem;
+ }
+
+ &__stats--wrap {
+  text-align: center;
+ }
+
+ &__stats--number {
+  font-size: 1.1rem;
+ }
+
+ &__stats--type {
+  font-size: 0.5845rem;
+  letter-spacing: 2px;
+  color: $darkGrayishBlue;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+ }
+}
+
+.footer {
+ position: absolute;
+ top: 90%;
+ font-size: 0.8rem;
+ text-align: center;
+ color: $darkGrayishBlue;
+}
